@@ -1,11 +1,26 @@
 language: node_js
 node_js:
-    - "8"
+- '8'
 before_install:
-    - npm install --save-dev nyc
-    - npm install --save-dev source-map-support
+- npm install --save-dev nyc
+- npm install --save-dev source-map-support
 after_success:
-    - npm run coverage
+- npm run coverage
 cache:
   directories:
-    - "node_modules"
+  - node_modules
+notifications:
+  email:
+    on_success: always
+    on_failure: always
+  slack:
+    rooms:
+      secure: oEkaBMwtBHPdeSW+fjM1UcnFpXwvCkx8xXoqQ5sAWivlaMwLJPnCbbxSD6ptFcFnBbNv196SKEEG1cA+tHUMCYE+RVJkrPGJmskPEBy0OB72pQLVHhKRpm5+rGaOtuG/d3D8y2xXE42bDvNWLyDuZCTdhnMYV+AOukD5fDgiC3amYS5Sx8ZnVvWhgqckSHrBUzsHRvlUpdE6x9/XGck/jkRX4cA+wiBOdK1YOcAQtf9kDGV/1G89ohc1FPAJBJ4a61AbWBhsBH5y1o/1/q8iNdPRgq/ih4edfKp6eW3PZnAz0pofukVYSgNaU1IcA776sVK3R339R5pefbiQ8psZWLCUIR6bK9mm0Y6vzhYmsi7yLUV6rAWCHPoKdv1gpfQiSqeE+5ss7KD0z2wgkqLcESMZEVUZ2+IEOMtu+/yTolKMVBeCgx6hCQhOuaPEpNz/WP/ptnLKd8iq2wdLB0Jwbzn8m89WPhGTvRDLl5hFB1X45oyaxBJaMVgVwMzc1MnD3blD7R6YUSqZ8n9LvN2e4+42sNpOLZ9zZVr+2K42AsSdtmN0NiX85ttrol6sEz69ao4CHy6XmL1G9cqUMfQpIr9RqwD7wpAYiCVJFSVJJ7IzCpX2sYyMZjvSXdL5/J89muhccSJ+PO5nZJk4IpyO8AOSII48bNLMNwdj4rnycg4=
+      secure: X9XHYTvj7UJBKmtyqBKanXyh2d6/2m/9iXPdXixH6lfh0lOEXdVJ9gyXp3P7+TG2SPK5lCUgZGj1VBh5JLsuXUKpzQLUefiDLHTCvohkHXfWp2PLTLWQZFfCBN9ABtcJmpe62dArPHENBQuZc6AA6JP6crzzoIqi7nPoO+Qgdbx+7USrqq5EL7oIgpkNSqPihzHtTr2XJPpjy1Da0HkvOTV0tQZdvHBsPc0GOteQOI1VT9hazO/HMEgBfFhHdRlRvceSl1GQaFrbkO8GAtR7URDp7hCGK2t5412ExLDcq3AItDNscLmfOGNyEsTwXTOehN0mBn8gmu5nHpS2LN+zFDRtHPuSrGZqIu4h2QgGenlIK5HUFVXzLEeNAwI8c4LsHDCnoU9Lm47xcrJDmezSMtXdNJi7og2rY8sQjFs5ofMN1JpcKrNdwXjvownYHlEaMqZktFOmtC4i+x42Et+KGNElzPzMcb7ZymzgAyIlTry8CKIPg/WGjGEc2uGgZo6T/AtEH+UDg+8dBej0TnRUYd5++QP3ngtg96ZQabMvGUL6DeKab0TqzPHkZ5fvsQxSHXItNSwGryKgd2ogZoXkVGrgoRNKGnuV70/iv5Nu0l1+e7L75sbhWSMnymQsy78j4sNqOI9tAwNP8Z2PX8pXbY3JYtjkFIugnGkp9qVTgf4=
+  hipchat:
+    rooms:
+      secure: OGFTgIN/Xu6V6fJ9V1TyAsxnlW9mCinRWb4JsiPDDaj7sTKM2xzbyxakjL8akkM3Jgdf+JSSZyg9QBQD8lN97vfYXxLzXpxsvgp0loe0igDp9RJVPhceebr4P5XcFGH2QGG2diUi8aaHkhLKcXN35HwGvYOycFK3Q95e1ZERWK+CgcNMulAzDEYF5sNRK81as+B/cjf/Gb/JAE0Tcm1fU+niisN2SU+rXxtY0HyqwKWh5nO/vo19roLv2ZQb4T3Bsidggt0sHDG770VgdJZM0JToqXrxaWpAwkrPW1NtFz83+EhFbka/m6sXo0NeOWRaSbdmaogDbEvgU40euw2kO8/kKtg6GPhXUtbaeJF+VqM2lA2ebsxqDsbP+6itIBEv6NZuVz7L9Jv1ibEBlQp1Lxoq2zT6hrt8Q2Q08Oa4XU98DPd+Xyeu4q88ZAL+Y2ZoLGCo+vhWl7W+c2CHoJjlKCbyF9m2ClFSVZf9rQURf3NPsv8EkGpvG8Rp0oDC4PzVTFqSvxZY95/OQ93IoT/xN25XVpOzZJE0WgYWt4PHtj5++RYX0yQTm51h7JQTfcO6BZt8NIU0Vp34+iXEpOo6J11VNqtDuNWK2c+rwabuxbzJ5HrEKYHyv78IeLGpzZmZ3EjNVKSLuH6OJX8mSeGqFQmVsmboMtpz2qPwbfbzYM8=
+    template:
+    - '%{repository_slug}#%{build_number} (%{branch} - %{commit} : %{author}): %{message}
+      (<a href="%{build_url}">Details</a>/<a href="%{compare_url}">Change view</a>)'
+    format: html
