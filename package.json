@@ -4,10 +4,8 @@
     "description": "Electric Longboards",
     "main": "server.ts",
     "scripts": {
-        "cover": "istanbul cover nyc ./node_modules/.bin/mocha",
         "test": "nyc ./node_modules/.bin/mocha",
-        "coverage": "nyc report --reporter=text-lcov | coveralls",
-        "coveralls": "npm run cover -- --report lcovonly && cat ./coverage/lcov.info | coveralls"
+        "coverage": "nyc report --reporter=lcov --reporter=text-lcov | coveralls"
     },
     "nyc": {
         "extension": [
@@ -20,8 +18,7 @@
         ],
         "reporter": [
             "html",
-            "text",
-            "text-lcov"
+            "text"
         ],
         "all": true,
         "cache": true,
