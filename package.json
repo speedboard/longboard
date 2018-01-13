@@ -5,8 +5,8 @@
     "main": "server.ts",
     "private": true,
     "scripts": {
-        "test": "nyc ./node_modules/.bin/mocha",
-        "coverage": "nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls"
+        "test": "nyc --reporter=html --reporter=text ./node_modules/.bin/mocha",
+        "coverage": "nyc report --reporter=text-lcov | coveralls"
     },
     "nyc": {
         "extension": [
@@ -32,7 +32,6 @@
     },
     "keywords": [
         "skate",
-        "electric",
         "longboard"
     ],
     "author": "Ismael Queiroz <eu@iqueiroz.com.br>",
