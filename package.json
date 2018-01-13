@@ -5,7 +5,7 @@
     "main": "server.ts",
     "scripts": {
         "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha",
-        "coverage": "nyc report --reporter=lcov --reporter=text-lcov | coveralls"
+        "coverage": "./node_modules/.bin/nyc report --reporter=text-lcov | coveralls"
     },
     "nyc": {
         "extension": [
