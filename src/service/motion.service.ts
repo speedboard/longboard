@@ -12,7 +12,7 @@ export interface IMotionService {
 
 export class MotionService implements IMotionService {
 
-    speed: number;
+    private _speed: number;
 
     constructor(service?: Partial<MotionService>) {
         if (!isNullOrUndefined(service)) {
@@ -21,11 +21,19 @@ export class MotionService implements IMotionService {
     }
 
     accelerate(speed: number): number {
-        return this.speed + speed;
+        return this._speed + speed;
     }
 
     decelerate(speed: number): number {
-        return this.speed - speed;
+        return this._speed - speed;
+    }
+
+    get speed(): number {
+        return this._speed;
+    }
+
+    set speed(value: number) {
+        this._speed = value;
     }
 
 }
