@@ -4,8 +4,10 @@ node_js:
 #before_install:
 #  - npm install
 #  - npm test
+env:
+    - NODE_ENV=test
 after_success:
-- npm run coveralls
+- coveralls
 #cache:
 #  directories:
 #    - "node_modules"
