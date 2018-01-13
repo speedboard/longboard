@@ -18,7 +18,8 @@
         ],
         "lib": [
             "esnext"
-        ]
+        ],
+        "inlineSourceMap": true
         /* List of folders to include type definitions from. */
     },
     "include": [
