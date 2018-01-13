@@ -6,7 +6,7 @@ describe('MotionService accelerate', () => {
         const result = new MotionService({
             speed: 100,
         });
-        // expect(result.speed).to.equal(100);
+        expect(result.speed).to.equal(100);
         expect(result.accelerate(10)).to.equal(result.speed + 10);
     });
 });
