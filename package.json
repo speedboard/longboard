@@ -6,7 +6,7 @@
     "private": true,
     "scripts": {
         "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha",
-        "coverage": "./node_modules/.bin/nyc report --reporter=text-lcov | coveralls"
+        "coverage": "./node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls"
     },
     "nyc": {
         "extension": [
