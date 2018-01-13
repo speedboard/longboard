@@ -5,8 +5,8 @@
     "main": "server.ts",
     "private": true,
     "scripts": {
-        "test": "./node_modules/.bin/nyc ./node_modules/.bin/mocha",
-        "coverage": "./node_modules/.bin/nyc report --reporter=text-lcov | ./node_modules/.bin/coveralls"
+        "test": "nyc ./node_modules/.bin/mocha --require ts-node/register **/*.spec.ts --require source-map-support/register --recursive",
+        "coverage": "nyc report --reporter=text-lcov | coveralls"
     },
     "nyc": {
         "extension": [
