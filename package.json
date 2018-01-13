@@ -18,7 +18,8 @@
         ],
         "reporter": [
             "html",
-            "text"
+            "text",
+            "text-lcov"
         ],
         "all": true,
         "cache": true,

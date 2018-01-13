@@ -2,7 +2,6 @@ language: node_js
 node_js:
     - "8"
 after_success:
-    - ./node_modules/.bin/nyc --extension=.ts --reporter=html --reporter=text --cache=true --all=true --sourceMap=false --instrument=false --exclude=**/*.js --exclude=**/*.d.ts --exclude=**/*.spec.ts ./node_modules/.bin/mocha
     - npm run coverage
 cache:
   directories:
