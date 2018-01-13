@@ -5,7 +5,7 @@
     "main": "server.ts",
     "private": true,
     "scripts": {
-        "test": "nyc --reporter=html --reporter=text ./node_modules/.bin/mocha",
+        "test": "nyc --cache=true ./node_modules/.bin/mocha",
         "coverage": "nyc report --reporter=text-lcov | coveralls"
     },
     "nyc": {
@@ -22,7 +22,7 @@
             "text"
         ],
         "all": true,
-        "cache": true,
+        "cache": false,
         "sourceMap": false,
         "instrument": false
     },
