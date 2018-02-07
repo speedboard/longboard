@@ -41,8 +41,7 @@
     },
     "homepage": "https://speedboard.github.io",
     "dependencies": {
-        "express": "^4.16.2",
-        "typescript": "^2.6.2"
+        "onoff": "^1.1.9"
     },
     "devDependencies": {
         "@types/chai": "^4.1.0",
