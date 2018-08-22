@@ -11,8 +11,8 @@ cache:
   - node_modules
 notifications:
   email:
-    on_success: always
-    on_failure: always
+    on_success: never
+    on_failure: never
   slack:
     rooms:
       secure: oEkaBMwtBHPdeSW+fjM1UcnFpXwvCkx8xXoqQ5sAWivlaMwLJPnCbbxSD6ptFcFnBbNv196SKEEG1cA+tHUMCYE+RVJkrPGJmskPEBy0OB72pQLVHhKRpm5+rGaOtuG/d3D8y2xXE42bDvNWLyDuZCTdhnMYV+AOukD5fDgiC3amYS5Sx8ZnVvWhgqckSHrBUzsHRvlUpdE6x9/XGck/jkRX4cA+wiBOdK1YOcAQtf9kDGV/1G89ohc1FPAJBJ4a61AbWBhsBH5y1o/1/q8iNdPRgq/ih4edfKp6eW3PZnAz0pofukVYSgNaU1IcA776sVK3R339R5pefbiQ8psZWLCUIR6bK9mm0Y6vzhYmsi7yLUV6rAWCHPoKdv1gpfQiSqeE+5ss7KD0z2wgkqLcESMZEVUZ2+IEOMtu+/yTolKMVBeCgx6hCQhOuaPEpNz/WP/ptnLKd8iq2wdLB0Jwbzn8m89WPhGTvRDLl5hFB1X45oyaxBJaMVgVwMzc1MnD3blD7R6YUSqZ8n9LvN2e4+42sNpOLZ9zZVr+2K42AsSdtmN0NiX85ttrol6sEz69ao4CHy6XmL1G9cqUMfQpIr9RqwD7wpAYiCVJFSVJJ7IzCpX2sYyMZjvSXdL5/J89muhccSJ+PO5nZJk4IpyO8AOSII48bNLMNwdj4rnycg4=
