@@ -48,7 +48,7 @@
         "@types/chai": "^4.1.0",
         "@types/expect": "^1.20.2",
         "@types/mocha": "^2.2.46",
-        "@types/node": "^9.3.0",
+        "@types/node": "^10.12.5",
         "@types/source-map": "^0.5.7",
         "chai": "^4.1.2",
         "coveralls": "^3.0.0",
