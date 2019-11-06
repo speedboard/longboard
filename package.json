@@ -46,7 +46,7 @@
     },
     "devDependencies": {
         "@types/chai": "^4.1.0",
-        "@types/expect": "^1.20.2",
+        "@types/expect": "^24.3.0",
         "@types/mocha": "^2.2.46",
         "@types/node": "^9.3.0",
         "@types/source-map": "^0.5.7",
